@@ -57,7 +57,7 @@
 					<execution>
 						<id>war-exploded</id>
 						<configuration>
-							<webappDirectory>target/deploy</webappDirectory>
+							<webappDirectory>target/</webappDirectory>
 							<archiveClasses>true</archiveClasses>
 						</configuration>
 						<phase>repackage</phase>
