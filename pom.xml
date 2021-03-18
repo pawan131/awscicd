@@ -37,6 +37,11 @@
 			<artifactId>spring-boot-starter-test</artifactId>
 			<scope>test</scope>
 		</dependency>
+		<dependency>
+   <groupId>org.apache.tomcat.embed</groupId>
+   <artifactId>tomcat-embed-jasper</artifactId>
+   <scope>provided</scope>
+  </dependency>
 	</dependencies>
 
 	<build>
@@ -44,6 +49,23 @@
 			<plugin>
 				<groupId>org.springframework.boot</groupId>
 				<artifactId>spring-boot-maven-plugin</artifactId>
+				<executions>
+					<execution>
+						<id>default-war</id>
+						<phase>none</phase>
+					</execution>
+					<execution>
+						<id>war-exploded</id>
+						<configuration>
+							<webappDirectory>target/deploy</webappDirectory>
+							<archiveClasses>true</archiveClasses>
+						</configuration>
+						<phase>repackage</phase>
+						<goals>
+							<goal>exploded</goal>
+						</goals>
+					</execution>
+				</executions>
 			</plugin>
 		</plugins>
 	</build>
