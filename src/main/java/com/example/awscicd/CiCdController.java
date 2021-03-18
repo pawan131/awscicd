@@ -10,6 +10,6 @@ public class CiCdController {
 
 	@GetMapping("welcome")
 	public String Sample() {
-		return "Hi! Pawan";
+		return "Hi! Killer";
 	}
 }
