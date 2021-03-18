@@ -13,4 +13,4 @@ phases:
     - mv target/awscicd-0.0.1-SNAPSHOT ./
 artifacts:
   files:
-    - deploy/**/*
+    - awscicd-0.0.1-SNAPSHOT/**/*
